@@ -19,7 +19,7 @@ Duella KPSS, KPSS sorularını oyunlaştırılmış labirent ve bölüm deneyimi
 ├── index.html          # Ana sayfa
 ├── css/style.css       # Stiller
 ├── js/main.js          # Etkileşimler
-├── assets/logo.svg     # Duella logosu
+├── assets/logo.png     # Duella logosu (şeffaf PNG)
 ├── seo-content.md      # AI-SEO içerik stratejisi
 ├── llms.txt            # AI arama motorları için site özeti
 ├── robots.txt          # Crawler kuralları
