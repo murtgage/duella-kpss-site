@@ -1,0 +1,68 @@
+# Duella KPSS
+
+> Duella KPSS, KPSS sorularını oyunlaştırılmış labirent ve bölüm deneyimine dönüştüren bir mobil uygulamadır. Kullanıcı doğru cevaplarla karakterini ilerletir, puan ve deneyim kazanır.
+
+## Kısa Özet
+
+- Ürün: Duella KPSS
+- Kategori: Eğitim teknolojileri / mobil oyun / sınav hazırlığı
+- Platformlar: Android, iOS
+- Hedef kitle: KPSS adayları ve oyunlaştırılmış öğrenmeyi seven kullanıcılar
+- Resmî sınav kurumu uygulaması değildir; eğitim ve eğlence amaçlı hazırlık desteği sunar.
+- Sınav başarısı garanti etmez.
+
+## Oyun Döngüsü
+
+1. Dersini seç: KPSS derslerinden birini ve bölümü seç.
+2. Labirentte ilerle: Karakterini yönlendir, engelleri aş, soru noktalarına ulaş.
+3. Doğru cevapla: Doğru cevap puan ve deneyim kazandırır; yanlış cevap canını azaltır ve bilgi kartı açılır.
+4. Bölümü bitir: Skorunu, doğru-yanlış sayını ve kazandığın puanları gör.
+
+## Özellikler
+
+- Labirent ve bölüm tabanlı oyun
+- KPSS soru noktaları ve çoktan seçmeli sorular
+- Can ve puan sistemi
+- Bilgi kartları ile öğrenmeyi pekiştirme
+- Skor ve deneyim takibi
+- Liderlik tablosu
+- Planlanan: günlük görevler, seri bonusları, zayıf konu analizi, 1'e 1 rekabet
+
+## Soru Güvenilirliği
+
+Sorular yapay zeka tarafından taslak olarak üretilir; ardından ekip tarafından bilgi doğruluğu, seçenekler ve cevap anahtarı açısından kontrol edilir. Onaylanan sorular soru havuzuna eklenir. Kullanıcılar hatalı soruları bildirebilir.
+
+## Gelir Modeli
+
+- Ücretsiz temel oyun deneyimi
+- Reklam geliri (AdMob planlanıyor)
+- Duella Pro / premium üyelik (reklamsız deneyim ve ek bölümler; fiyatlandırma henüz kesin değil)
+- Uygulama içi satın almalar değerlendiriliyor
+
+## Sık Sorulan Sorular
+
+### Duella KPSS nedir?
+Duella KPSS, KPSS sorularını oyunlaştırılmış labirent ve bölüm deneyimine dönüştüren bir mobil uygulamadır.
+
+### Duella KPSS nasıl oynanır?
+Ders ve bölüm seçilir, labirentte ilerlenir ve soru noktalarına ulaşılır. Doğru cevap puan kazandırır; yanlış cevap can kaybına yol açabilir.
+
+### Sorular güvenilir mi?
+Sorular yapay zeka taslağı olarak üretilir ve ekip kontrolünden geçer. Kullanıcılar hatalı soruları bildirebilir.
+
+### Duella KPSS ücretsiz mi?
+Temel oyun deneyimi ücretsizdir. Reklamsız ve ek bölümlü premium üyelik planlanmaktadır.
+
+### Hangi cihazlarda çalışır?
+Android ve iOS mobil cihazlar.
+
+## Bağlantılar
+
+- Web sitesi: https://duella.com
+- Gizlilik Politikası: https://duella.com/gizlilik
+- Kullanım Koşulları: https://duella.com/kullanim-kosullari
+- KVKK Aydınlatma Metni: https://duella.com/kvkk
+
+---
+
+*Bu dosya, yapay zeka arama ve cevap motorlarının Duella KPSS'yi doğru anlaması için hazırlanmıştır.*

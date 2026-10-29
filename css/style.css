@@ -1,0 +1,685 @@
+/* =========================================================
+   Duella KPSS — Tanıtım Sitesi Stilleri
+   ========================================================= */
+
+:root {
+  --yellow: #FFD700;
+  --orange: #FF8C00;
+  --pink: #FF1493;
+  --purple: #8A2BE2;
+  --blue: #00BFFF;
+  --green: #00FF7F;
+  --bg-gradient-start: #1a0a2e;
+  --bg-gradient-mid: #2d1b4e;
+  --bg-gradient-end: #1a1a3a;
+  --text-main: #f0f0f5;
+  --text-sub: #a9a9c0;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --card-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 40%, var(--bg-gradient-end) 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.15), rgba(255, 140, 0, 0.15), rgba(255, 20, 147, 0.15), rgba(138, 43, 226, 0.15), rgba(0, 191, 255, 0.15), rgba(0, 255, 127, 0.15), transparent 70%);
+  z-index: 0;
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-10%, -5%) scale(1.05); }
+  66% { transform: translate(10%, 5%) scale(0.95); }
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-brand img {
+  width: 64px;
+  height: 64px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--yellow);
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(45deg, var(--yellow) 0%, var(--orange) 15%, var(--pink) 30%, var(--purple) 45%, var(--blue) 60%, var(--green) 75%, var(--yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-sub);
+  margin-bottom: 2rem;
+  max-width: 560px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 20%, var(--pink) 40%, var(--purple) 60%, var(--blue) 80%, var(--green) 100%);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4), 0 0 40px rgba(255, 140, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 140, 0, 0.5);
+}
+
+.secondary-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--card-border);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-3px);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Oyun Önizleme (Hero sağ) ---------- */
+.game-preview {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--card-border);
+  border-radius: 28px;
+  padding: 1.25rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.game-hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--yellow);
+}
+
+.hud-item {
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.maze {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  aspect-ratio: 1;
+  margin-bottom: 1rem;
+}
+
+.maze-cell {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.maze-cell.wall {
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.55), rgba(0, 191, 255, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.maze-cell.question {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--yellow);
+  border: 1px solid rgba(255, 215, 0, 0.45);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.maze-cell.player {
+  background: linear-gradient(135deg, var(--yellow), var(--pink), var(--blue), var(--green));
+  color: #1a0a2e;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.55);
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(255, 215, 0, 0); }
+  50% { box-shadow: 0 0 16px rgba(255, 215, 0, 0.45); }
+}
+
+.question-card {
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 1rem;
+}
+
+.question-topic {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.35rem;
+}
+
+.question-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.option {
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.option.correct {
+  background: rgba(0, 255, 127, 0.15);
+  border-color: rgba(0, 255, 127, 0.5);
+  color: var(--green);
+  font-weight: 700;
+}
+
+/* ---------- Genel Section ---------- */
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+section h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.6rem);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(45deg, var(--yellow) 0%, var(--pink) 40%, var(--blue) 70%, var(--green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--text-sub);
+  max-width: 720px;
+  margin: -1.25rem auto 2.5rem;
+}
+
+/* ---------- Oyun Döngüsü ---------- */
+.loop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.loop-step {
+  text-align: center;
+  padding: 1.75rem 1.25rem;
+  border-radius: 22px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.loop-step:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.loop-icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.loop-step h3 {
+  font-size: 1.05rem;
+  color: var(--yellow);
+  margin-bottom: 0.4rem;
+}
+
+.loop-step p {
+  font-size: 0.92rem;
+  color: var(--text-sub);
+}
+
+/* ---------- Özellikler ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  padding: 2rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.65rem;
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.card p {
+  color: var(--text-sub);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ---------- Soru Güvenilirliği ---------- */
+.trust-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.trust-step {
+  padding: 1.5rem 1.1rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
+}
+
+.trust-step:hover {
+  transform: translateY(-5px);
+}
+
+.trust-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.75rem;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #1a0a2e;
+  background: linear-gradient(135deg, var(--yellow), var(--pink), var(--blue));
+}
+
+.trust-step h3 {
+  font-size: 0.98rem;
+  color: var(--yellow);
+  margin-bottom: 0.4rem;
+}
+
+.trust-step p {
+  font-size: 0.86rem;
+  color: var(--text-sub);
+  line-height: 1.5;
+}
+
+/* ---------- Premium ---------- */
+.premium {
+  max-width: 900px;
+}
+
+.premium-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(255, 215, 0, 0.1), rgba(255, 20, 147, 0.08), rgba(0, 191, 255, 0.08));
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.premium-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a0a2e;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+}
+
+.premium-card h2 {
+  margin-bottom: 1rem;
+}
+
+.premium-card > p {
+  color: var(--text-sub);
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+.premium-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.premium-list li {
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.premium-list li::before {
+  content: "✦ ";
+  color: var(--yellow);
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 800px;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: border-color 0.2s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+
+.faq-item p {
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 0.75rem;
+  background: linear-gradient(45deg, var(--yellow), var(--pink), var(--blue), var(--green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.footer-subtitle {
+  color: var(--text-sub);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.download-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.app-store-button,
+.play-store-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #1a1a3a 0%, #2d1b4e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-store-button:hover,
+.play-store-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.75rem 0 1rem;
+}
+
+.legal-links a {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: var(--yellow);
+}
+
+.footer p {
+  color: var(--text-sub);
+  font-size: 0.9rem;
+}
+
+.disclaimer {
+  max-width: 720px;
+  margin: 0 auto 1rem;
+  font-size: 0.78rem !important;
+  opacity: 0.75;
+  line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-brand,
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .game-preview {
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .loop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 0;
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .loop-grid,
+  .trust-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-item {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .premium-card {
+    padding: 2.25rem 1.25rem;
+  }
+}
